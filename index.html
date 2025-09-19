@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sandbox de IA con Kill Switch Financiero | DocSolutions</title>
+  <meta name="description" content="Experimenta con IA sin riesgos: límites de presupuesto, alertas progresivas y kill switch financiero automático para frenar el gasto.">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Suavizado de fuentes y scroll */
+    html { scroll-behavior: smooth; }
+    /* Fallback de fondo cuando la imagen no carga */
+    .hero-fallback {
+      background: radial-gradient(1000px 600px at 20% 10%, rgba(16,185,129,0.3), transparent 60%),
+                  linear-gradient(135deg, #0f172a 0%, #020617 100%);
+    }
+    /* Clase utilitaria para fondos con imagen + overlay */
+    .bg-cover-overlay {
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      isolation: isolate;
+    }
+    .bg-cover-overlay::after {
+      content: "";
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(2,6,23,0.85) 100%);
+      z-index: 0;
+    }
+  </style>
+</head>
+<body class="antialiased text-slate-200 bg-slate-950 selection:bg-emerald-400 selection:text-slate-900">
+
+  <!-- ===== Navegación ===== -->
+  <header class="sticky top-0 z-50 backdrop-blur bg-slate-950/60 border-b border-white/10">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#inicio" class="flex items-center gap-2">
+        <span class="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-emerald-400 text-slate-900 font-extrabold">AI</span>
+        <span class="sr-only">Inicio</span>
+      </a>
+      <ul class="hidden md:flex items-center gap-6 text-sm">
+        <li><a href="#problema" class="hover:text-emerald-400">Problema</a></li>
+        <li><a href="#solucion" class="hover:text-emerald-400">Solución</a></li>
+        <li><a href="#funcionamiento" class="hover:text-emerald-400">Cómo funciona</a></li>
+        <li><a href="#beneficios" class="hover:text-emerald-400">Beneficios</a></li>
+        <li><a href="#faq" class="hover:text-emerald-400">FAQ</a></li>
+      </ul>
+      <a href="#contacto" class="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-400 text-slate-900 font-semibold hover:brightness-95">
+        Contacto
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+        </svg>
+      </a>
+    </nav>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section id="inicio"
+    class="relative hero-fallback bg-cover-overlay"
+    style="background-image: url('https://www.freepik.es/foto-gratis/tecnologia-fondo-toque-humano-nueva-version-moderna-creacion-adan_17851045.htm#fromView=search&page=1&position=2&uuid=88a0de72-4562-4d47-bdc6-39fe35319d22&query=IA+');">
+    <div class="relative z-10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-28 lg:py-32">
+        <div class="max-w-3xl">
+          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-400/20 text-emerald-300 text-xs font-semibold ring-1 ring-inset ring-emerald-400/30">
+            Sandbox seguro de IA
+          </span>
+          <h1 class="mt-6 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
+            Innovar con IA<br class="hidden sm:block"> sin miedo al presupuesto
+          </h1>
+          <p class="mt-5 text-lg sm:text-xl text-slate-300">
+            Un entorno de pruebas de IA con límites de gasto, alertas progresivas y <span class="font-semibold text-emerald-300">kill switch financiero</span> automático. Experimenta, mide y controla.
+          </p>
+          <div class="mt-8 flex flex-wrap items-center gap-3">
+            <a href="#solucion" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-emerald-400 text-slate-900 font-semibold hover:brightness-95">
+              Ver cómo funciona
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="#contacto" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white/10 hover:bg-white/15 border border-white/10">
+              Habla con nosotros
+            </a>
+          </div>
+          <p class="mt-4 text-xs text-slate-400">
+            Crédito de imagen: Freepik (enlace de referencia).
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Sección: Problema ===== -->
+  <section id="problema" class="py-16 sm:py-20 border-b border-white/10 bg-gradient-to-b from-slate-950 to-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl sm:text-4xl font-bold">El problema</h2>
+          <p class="mt-4 text-slate-300">
+            La adopción de IA se frena por <span class="font-semibold">incertidumbre en costos</span>, pilotos que no escalan y el temor a “facturas sorpresa”.
+            Los CFOs exigen métricas duras; los equipos técnicos necesitan experimentar sin arriesgar el presupuesto.
+          </p>
+          <ul class="mt-6 space-y-3 text-slate-300">
+            <li class="flex gap-3"><span class="text-emerald-400">•</span> Falta de control de gasto por proyecto, modelo o equipo.</li>
+            <li class="flex gap-3"><span class="text-emerald-400">•</span> Pilotos eternos sin criterios claros de “seguir/pausar/detener”.</li>
+            <li class="flex gap-3"><span class="text-emerald-400">•</span> Lock-in y dificultad para comparar modelos.</li>
+          </ul>
+        </div>
+        <div class="relative">
+          <div class="rounded-2xl p-6 bg-white/5 ring-1 ring-white/10">
+            <h3 class="text-xl font-semibold">¿Qué buscamos resolver?</h3>
+            <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="p-4 rounded-xl bg-slate-800/60">
+                <p class="text-sm text-slate-300">Visibilidad del gasto en tiempo real</p>
+                <p class="mt-1 text-xs text-slate-400">Tokens, llamadas, equipos y casos de uso.</p>
+              </div>
+              <div class="p-4 rounded-xl bg-slate-800/60">
+                <p class="text-sm text-slate-300">Alertas y límites programables</p>
+                <p class="mt-1 text-xs text-slate-400">Umbrales al 70/90/100% del presupuesto.</p>
+              </div>
+              <div class="p-4 rounded-xl bg-slate-800/60">
+                <p class="text-sm text-slate-300">Kill switch financiero</p>
+                <p class="mt-1 text-xs text-slate-400">Corte automático y reversible por políticas.</p>
+              </div>
+              <div class="p-4 rounded-xl bg-slate-800/60">
+                <p class="text-sm text-slate-300">Comparación de modelos</p>
+                <p class="mt-1 text-xs text-slate-400">Evita lock-in; elige por costo/valor real.</p>
+              </div>
+            </div>
+            <p class="mt-4 text-xs text-slate-400">Pensado para CFOs, managers de innovación e ingeniería.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Sección: Solución ===== -->
+  <section id="solucion" class="py-16 sm:py-20 border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="order-2 lg:order-1">
+          <h2 class="text-3xl sm:text-4xl font-bold">La solución: Sandbox con Kill Switch financiero</h2>
+          <p class="mt-4 text-slate-300">
+            Un entorno de pruebas para IA con presupuesto por proyecto, alertas progresivas y corte automático.
+            Mide impacto, controla costos y decide con datos si escalas, iteras o detienes.
+          </p>
+          <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-5 rounded-2xl bg-white/5 ring-1 ring-white/10">
+              <p class="text-emerald-300 text-sm font-semibold">1) Define presupuesto</p>
+              <p class="text-slate-300 text-sm mt-1">Por mes, por equipo o caso de uso.</p>
+            </div>
+            <div class="p-5 rounded-2xl bg-white/5 ring-1 ring-white/10">
+              <p class="text-emerald-300 text-sm font-semibold">2) Monitorea uso</p>
+              <p class="text-slate-300 text-sm mt-1">Tokens, llamadas, coste acumulado.</p>
+            </div>
+            <div class="p-5 rounded-2xl bg-white/5 ring-1 ring-white/10">
+              <p class="text-emerald-300 text-sm font-semibold">3) Recibe alertas</p>
+              <p class="text-slate-300 text-sm mt-1">70% → 90% → 100% con notificación.</p>
+            </div>
+            <div class="p-5 rounded-2xl bg-white/5 ring-1 ring-white/10">
+              <p class="text-emerald-300 text-sm font-semibold">4) Kill switch</p>
+              <p class="text-slate-300 text-sm mt-1">Desactiva claves o bloquea rutas.</p>
+            </div>
+          </div>
+        </div>
+        <div class="order-1 lg:order-2">
+          <div class="rounded-2xl overflow-hidden ring-1 ring-white/10 relative bg-cover-overlay hero-fallback"
+            style="background-image: url('https://www.freepik.es/foto-gratis/tecnologia-fondo-toque-humano-nueva-version-moderna-creacion-adan_17851045.htm#fromView=search&page=1&position=2&uuid=88a0de72-4562-4d47-bdc6-39fe35319d22&query=IA+'); min-height: 320px;">
+            <div class="relative z-10 p-6">
+              <p class="text-sm text-emerald-300 font-semibold">Visual de referencia</p>
+              <h3 class="mt-2 text-2xl font-bold">Control y visibilidad desde el día 1</h3>
+              <p class="mt-2 text-sm text-slate-300">Crea confianza en comité y equipos técnicos.</p>
+            </div>
+          </div>
+          <p class="mt-3 text-xs text-slate-400">Crédito de imagen: Freepik (enlace de referencia).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Sección: Cómo funciona (MVP) ===== -->
+  <section id="funcionamiento" class="py-16 sm:py-20 border-b border-white/10 bg-slate-900/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl sm:text-4xl font-bold">Cómo funciona el prototipo (MVP)</h2>
+      <p class="mt-4 text-slate-300 max-w-3xl">
+        Empezamos simple para validar rápido: política de presupuesto + monitoreo + alertas + kill switch automatizado.
+      </p>
+      <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <!-- Paso 1 -->
+        <div class="p-6 rounded-2xl bg-white/5 ring-1 ring-white/10">
+          <p class="text-sm text-emerald-300 font-semibold">Paso 1</p>
+          <h3 class="mt-1 font-bold">Define presupuesto</h3>
+          <p class="mt-2 text-sm text-slate-300">Asigna un tope por proyecto/equipo. Etiqueta costos por clave/API.</p>
+        </div>
+        <!-- Paso 2 -->
+        <div class="p-6 rounded-2xl bg-white/5 ring-1 ring-white/10">
+          <p class="text-sm text-emerald-300 font-semibold">Paso 2</p>
+          <h3 class="mt-1 font-bold">Monitorea uso</h3>
+          <p class="mt-2 text-sm text-slate-300">Dashboard de consumo (tokens/llamadas) con alertas.</p>
+        </div>
+        <!-- Paso 3 -->
+        <div class="p-6 rounded-2xl bg-white/5 ring-1 ring-white/10">
+          <p class="text-sm text-emerald-300 font-semibold">Paso 3</p>
+          <h3 class="mt-1 font-bold">Alertas progresivas</h3>
+          <p class="mt-2 text-sm text-slate-300">Notifica al 70% y 90% por e-mail/Teams/Slack.</p>
+        </div>
+        <!-- Paso 4 -->
+        <div class="p-6 rounded-2xl bg-white/5 ring-1 ring-white/10">
+          <p class="text-sm text-emerald-300 font-semibold">Paso 4</p>
+          <h3 class="mt-1 font-bold">Kill switch</h3>
+          <p class="mt-2 text-sm text-slate-300">Al 100%, suspende claves o bloquea rutas de acceso.</p>
+        </div>
+      </div>
+
+      <div class="mt-10 grid lg:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl bg-emerald-400/10 ring-1 ring-emerald-400/30">
+          <h4 class="font-semibold text-emerald-300">Tecnologías típicas para el MVP</h4>
+          <ul class="mt-3 text-sm text-slate-300 space-y-2">
+            <li>• Presupuestos/cuotas en la nube (Azure/AWS/Google) + alertas.</li>
+            <li>• Orquestación sencilla (Power Automate / n8n) para ejecutar el corte.</li>
+            <li>• Dashboard (Power BI / Grafana) con métricas clave.</li>
+          </ul>
+        </div>
+        <div class="p-6 rounded-2xl bg-white/5 ring-1 ring-white/10">
+          <h4 class="font-semibold">Políticas de negocio</h4>
+          <p class="mt-2 text-sm text-slate-300">Define quién puede pedir excepciones, niveles de aprobación y ventanas de reactivación.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-white/5 ring-1 ring-white/10">
+          <h4 class="font-semibold">Escalada posterior</h4>
+          <p class="mt-2 text-sm text-slate-300">Comparadores multi-modelo, ruteo inteligente y evaluación de calidad con datasets propios.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Sección: Beneficios ===== -->
+  <section id="beneficios" class="py-16 sm:py-20 border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl sm:text-4xl font-bold">Beneficios clave</h2>
+      <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl bg-white/5 ring-1 ring-white/10">
+          <h3 class="font-semibold">Confianza del CFO</h3>
+          <p class="mt-2 text-sm text-slate-300">Coste bajo control con umbrales y reportes claros.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-white/5 ring-1 ring-white/10">
+          <h3 class="font-semibold">Tiempo-a-valor</h3>
+          <p class="mt-2 text-sm text-slate-300">Pilotos con límites; decide rápido si escalar o pausar.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-white/5 ring-1 ring-white/10">
+          <h3 class="font-semibold">Menos lock-in</h3>
+          <p class="mt-2 text-sm text-slate-300">Comparas proveedores por costo/valor real.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-white/5 ring-1 ring-white/10">
+          <h3 class="font-semibold">Gobernanza simple</h3>
+          <p class="mt-2 text-sm text-slate-300">Políticas entendibles por negocio y tecnología.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-white/5 ring-1 ring-white/10">
+          <h3 class="font-semibold">Seguridad financiera</h3>
+          <p class="mt-2 text-sm text-slate-300">Kill switch automático y reversible.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-white/5 ring-1 ring-white/10">
+          <h3 class="font-semibold">Visión integral</h3>
+          <p class="mt-2 text-sm text-slate-300">Gasto por proyecto, equipo y caso de uso.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Sección: FAQ ===== -->
+  <section id="faq" class="py-16 sm:py-20 border-b border-white/10 bg-slate-900/40">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl sm:text-4xl font-bold">Preguntas frecuentes</h2>
+      <div class="mt-8 space-y-4">
+        <details class="group rounded-2xl bg-white/5 ring-1 ring-white/10 p-5">
+          <summary class="flex cursor-pointer items-center justify-between text-left">
+            <span class="font-semibold">¿Necesito cambiar de proveedor de IA?</span>
+            <span class="ml-4 transition-transform group-open:rotate-90">➤</span>
+          </summary>
+          <p class="mt-3 text-sm text-slate-300">
+            No. El sandbox se integra con los principales proveedores (Azure, AWS, Google, OpenAI). La meta es comparar y controlar gasto.
+          </p>
+        </details>
+        <details class="group rounded-2xl bg-white/5 ring-1 ring-white/10 p-5">
+          <summary class="flex cursor-pointer items-center justify-between text-left">
+            <span class="font-semibold">¿El kill switch detiene toda la IA?</span>
+            <span class="ml-4 transition-transform group-open:rotate-90">➤</span>
+          </summary>
+          <p class="mt-3 text-sm text-slate-300">
+            Detiene el proyecto o la clave que superó el presupuesto. Es granular y reversible con aprobación.
+          </p>
+        </details>
+        <details class="group rounded-2xl bg-white/5 ring-1 ring-white/10 p-5">
+          <summary class="flex cursor-pointer items-center justify-between text-left">
+            <span class="font-semibold">¿Cuánto tarda el MVP?</span>
+            <span class="ml-4 transition-transform group-open:rotate-90">➤</span>
+          </summary>
+          <p class="mt-3 text-sm text-slate-300">
+            Un primer piloto se monta rápido con presupuestos/alertas de nube, orquestación simple y un dashboard básico.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Sección: Contacto (sin formulario) ===== -->
+  <section id="contacto" class="py-16 sm:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold">¿Te interesa probarlo?</h2>
+      <p class="mt-4 text-slate-300">
+        Escríbenos y agenda una demo del Sandbox de IA con Kill Switch financiero.
+      </p>
+      <div class="mt-6 inline-flex items-center gap-3 px-5 py-3 rounded-2xl bg-emerald-400 text-slate-900 font-semibold">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M16 12H8m0 0l4-4m-4 4l4 4M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+        <a href="mailto:alansanz@gmail.com" class="underline decoration-2 decoration-slate-900/20 hover:decoration-slate-900/40">alansanz@gmail.com</a>
+      </div>
+      <p class="mt-4 text-xs text-slate-500">No usamos formularios. Contáctanos directamente por correo.</p>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="py-10 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-xs text-slate-400">© <span id="year"></span> Sandbox de IA con Kill Switch financiero. Todos los derechos reservados.</p>
+      <div class="text-xs text-slate-500">
+        Imágenes de referencia: <a class="underline hover:text-slate-300" href="https://www.freepik.es/" target="_blank" rel="noopener">Freepik</a>.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Año dinámico en el footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
